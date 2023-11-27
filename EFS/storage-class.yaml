@@ -7,8 +7,8 @@ parameters:
   basePath: <PATH>
   directoryPerms: '755'
   fileSystemId: <FILESYSTEMID>
-  gidRangeEnd: '1001051000'
-  gidRangeStart: '1001050000'
+  gidRangeEnd: <gidRangeEnd>
+  gidRangeStart: <gidRangeStart>
   provisioningMode: efs-ap
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
