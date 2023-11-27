@@ -1,0 +1,15 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: <VOLUMENAME>
+spec:
+  capacity:
+    storage: <STORAGE>
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: '<FILESYSTEMID>::<ACCESSPOINTID>'
+  accessModes:
+    - ReadWriteMany
+persistentVolumeReclaimPolicy: Delete
+storageClassName: <STORAGECLASSNAME>
+volumeMode: Filesystem
