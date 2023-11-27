@@ -1,0 +1,17 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: efs.csi.aws.com
+    volume.kubernetes.io/storage-provisioner: efs.csi.aws.com
+  name: <PVC-NAME>
+  namespace: <NAMESPACE>
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: <STORAGE>
+  volumeName: <VOLUMENAME>
+  storageClassName: <STORAGECLASSNAME>
+  volumeMode: Filesystem
